@@ -1,0 +1,7 @@
+{
+  "event_name": "schedule",
+  "repository": {
+    "default_branch": "main"
+  },
+  "ref": "refs/heads/main"
+}

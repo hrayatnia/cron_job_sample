@@ -6,7 +6,8 @@ on:
       - main
   pull_request:
   schedule:
-    - cron: "* * * * *"
+    # GitHub Actions schedules run at minimum every 5 minutes (UTC).
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
