@@ -9,6 +9,11 @@ on:
     # GitHub Actions schedules run at minimum every 5 minutes (UTC).
     - cron: "*/5 * * * *"
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'branch to run'
+        required: true
+        default: 'main'
 
 jobs:
   test:
