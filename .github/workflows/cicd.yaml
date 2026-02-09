@@ -31,7 +31,6 @@ jobs:
         run: pytest
 
   scheduled-job:
-    if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
