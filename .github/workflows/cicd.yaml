@@ -1,10 +1,6 @@
 name: CI/CD
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
   schedule:
     # GitHub Actions schedules run at minimum every 5 minutes (UTC).
     - cron: "*/5 * * * *"
