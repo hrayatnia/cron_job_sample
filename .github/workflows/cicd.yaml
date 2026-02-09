@@ -10,6 +10,7 @@ on:
 
 jobs:
   test:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -31,6 +32,7 @@ jobs:
         run: pytest
 
   scheduled-job:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -50,4 +52,3 @@ jobs:
 
       - name: Run job
         run: python -m src.main
-
